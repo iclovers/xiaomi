@@ -4,10 +4,8 @@ $(function () {
     $('.slide-btn i').toggleClass('down');
     //点击按钮导航box上下滑动
     if ($('.slide-btn i').hasClass('down')) {
-      $('.slide-bar').hide();
       $('.slide-box').animate({ 'height': '3.3rem' })
     } else {
-      $('.slide-bar').show();
       $('.slide-box').animate({ 'height': 0 })
     }
   })
@@ -23,7 +21,6 @@ $(function () {
   scrollBar();
   // 轮播图
   var swiper = new Swiper('.swiper-container', {
-    
     autoplay: {
       delay: 2000,
       stopOnLastSlide: false,
@@ -32,12 +29,26 @@ $(function () {
     pagination: {
       el: '.swiper-pagination',
     },
-    disableOnInteraction: false,
     loop: true
   })
+  // 回到顶部按钮
+  $('.content').scroll(function () {   //获取滚动条初始高度
+    var topD = $('.content').scrollTop();  //获取滚动条初始高度的值 ：0
+    if (topD <= 200) {  //当滚动条高度为0时
+      $('.to-top').addClass('display-btn');
+    } else {
+      $('.to-top').removeClass('display-btn');
+    }
+    $('.to-top').on('click', function () {
+      //在执行动画之前加入stop(),停止当前的动画再执行此事件，否则回到顶部之后不能下拉
+      $('.content').stop().animate({ scrollTop: 0 }, 500);
+      return false;
+    })
+  })
+
 })
 
-//封装鼠标拖动导航栏函数
+//封装导航栏函数
 function scrollBar(e) {
   var slide_bar = document.querySelector('.slide-bar');
   var fw = parseInt(document.getElementsByTagName('html')[0].style.getPropertyValue("font-size"));
@@ -59,7 +70,7 @@ function scrollBar(e) {
     distanceX = moveX - startX;
     if (currentX + distanceX >= maxSlideLeft || currentX + distanceX <= minSlideLeft) {
       return;
-      
+
     }
     slide_bar.style.transition = 'none';
     slide_bar.style.left = (currentX + distanceX) / fw + 'rem';
@@ -77,4 +88,56 @@ function scrollBar(e) {
       currentX += distanceX;
     }
   })
+  //在此处设置index,方便后面多个函数共同使用
+  var index = 0;
+  // 给头部导航按钮注册点击事件
+  $('.slide-bar>li').on('click', function () {
+    // 获取当前被点击的索引
+    index = $(this).index();
+    // 计算出被点击的元素的左侧的li的总长度
+    var nw = 0;
+    for (var i = 0; i < index; i++) {
+      nw += $('.slide-bar>li').eq(i).innerWidth();
+    }
+    clickBar();
+    // 左右横向导航条操作
+    $(this).addClass('active').siblings().removeClass('active');
+    $('.slide-box-bd>span').eq(index).addClass('active').siblings().removeClass('active');
+    $('.content-box')[0].style.transition = 'left 0.5s';
+    $('.content-box')[0].style.left = -index * 7.2 + 'rem';
+  })
+  // 下拉导航框操作
+  $('.slide-box-bd>span').on('click', function () {
+    index = $(this).index();
+    clickBar();
+    $(this).addClass('active').siblings().removeClass('active');
+    $('.slide-bar>li').eq(index).addClass('active').siblings().removeClass('active');
+    $('.content-box')[0].style.transition = 'left 0.5s';
+    $('.content-box')[0].style.left = -index * 7.2 + 'rem';
+  })
+  //将导航偏移封装，便于复用
+  function clickBar() {
+    // 计算出被点击的元素的左侧的li的总长度
+    var nw = 0;
+    for (var i = 0; i < index; i++) {
+      nw += $('.slide-bar>li').eq(i).innerWidth();
+    }
+    //假设一个固定值为2rem,判断当前被点击的li的左边的li的总长度是否大于2rem，当大于2rem时，则ul的左偏移取 3rem-当前li的左边的li的总长度
+    //判断当点击的li的左边的li的总长度比较小，ul的左偏移需要为0，防止后续位置不能还原
+    if (2 * fw - nw >= 0) {
+      slide_bar.style.transition = 'all 0.5s';
+      slide_bar.style.left = 0;
+      currentX = 0;
+    } else if (2 * fw - nw <= minLeft) {
+      //当li的左边的li的总长度比较大，ul的左偏移需要为所能取到的最小值
+      currentX = minLeft;
+      slide_bar.style.transition = 'all 0.5s';
+      slide_bar.style.left = minLeft / fw + 'rem';
+    } else {
+      // 当没有超出范围时，根据索引值设定相应的偏移
+      slide_bar.style.transition = 'all 0.5s';
+      slide_bar.style.left = (2 * fw - nw) / fw + 'rem';
+      currentX = (2 * fw - nw);
+    }
+  }
 }
