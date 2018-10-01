@@ -265,43 +265,6 @@
 .layout .content > ul > li.active {
   display: block;
 }
-.layout .footer {
-  width: 7.2rem;
-  height: 1rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-}
-.layout .footer > ul {
-  width: 7.2rem;
-}
-.layout .footer > ul li {
-  float: left;
-  width: 1.8rem;
-  height: 1rem;
-  background-color: #fff;
-  text-align: center;
-  padding-top: .1rem;
-}
-.layout .footer > ul li a {
-  display: block;
-  height: 100%;
-}
-.layout .footer > ul li a i {
-  font-size: .36rem;
-  line-height: .5rem;
-}
-.layout .footer > ul li a p {
-  line-height: .3rem;
-  font-size: .24rem;
-}
-.layout .footer > ul li.active a i {
-  color: #ed5b00;
-}
-.layout .footer > ul li.active a p {
-  color: #ed5b00;
-}
 .to-top {
   display: block;
   position: fixed;
