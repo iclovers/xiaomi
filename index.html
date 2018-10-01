@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>小米首页</title>
+    <link rel="stylesheet" href="./css/layui.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/layui.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/base.js"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <!-- 顶部固定栏 -->
+        <div class="header">
+            <!-- 顶部搜索栏 -->
+            <div class="header-wrap">
+                <div class="layui-row">
+                    <!-- logo -->
+                    <div class="layui-col-xs2">
+                        <a href="javascript:;" class="logo">
+                            <img src="./images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <!-- 搜索 -->
+                    <div class="layui-col-xs8">
+                        <form action="" class="search">
+                            <input type="text" placeholder="搜索商品名称">
+                            <i class="layui-icon layui-icon-search"></i>
+                        </form>
+                    </div>
+                    <!-- 登录 -->
+                    <div class="layui-col-xs2">
+                        <a href="javascrit:;" class="login">
+                            <i class="layui-icon layui-icon-username"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 导航栏 -->
+            <div class="nav-wrap">
+                <!-- 左右拖动的导航条 -->
+                <ul class="slide-bar clearfix">
+                    <li class="active"><a href="javascript:;">推荐</a></li>
+                    <li><a href="javascript:;">手机</a></li>
+                    <li><a href="javascript:;">电视</a></li>
+                    <li><a href="javascript:;">智能</a></li>
+                    <li><a href="javascript:;">笔记本</a></li>
+                    <li><a href="javascript:;">家电</a></li>
+                    <li><a href="javascript:;">新款游戏本</a></li>
+                    <li><a href="javascript:;">双摄</a></li>
+                    <li><a href="javascript:;">全面屏</a></li>
+                    <li><a href="javascript:;">生活周边</a></li>
+                    <li><a href="javascript:;">盒子</a></li>
+                </ul>
+                <!-- 上下拉动的导航条 -->
+                <div class="slide-box">
+                    <div class="all">全部</div>
+                    <div class="slide-box-bd">
+                        <span class="active">推荐</span>
+                        <span>手机</span>
+                        <span>电视</span>
+                        <span>智能</span>
+                        <span>笔记本</span>
+                        <span>家电</span>
+                        <span>新款游戏本</span>
+                        <span>双摄</span>
+                        <span>全面屏</span>
+                        <span>生活周边</span>
+                        <span>盒子</span>
+                    </div>
+                </div>
+                <!-- 按钮 -->
+                <div class="slide-btn">
+                    <i class="layui-icon layui-icon-down"></i>
+                </div>
+            </div>
+        </div>
+        <!-- 内容 -->
+        <div class="content">
+            <ul>
+                <!-- 推荐板块 -->
+                <li class="active">
+                    <!-- 轮播图 -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./uploads/banner1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./uploads/banner2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./uploads/banner3.png" alt="">
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- 导航图标 -->
+                    <div class="banner-nav padding-bottom background-color">
+                        <ul class="clearfix">
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                        </ul>
+                    </div>
+                    <!-- 产品 -->
+                    <div class="product total-width">
+                        <!-- 热销 -->
+                        <div class="m-hot clearfix">
+                            <div class="float-left half-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/hot1.png" class="width-percent">
+                                </a>
+                            </div>
+                            <div class="float-left half-width l_border">
+                                <div class="half-width b_border">
+                                    <a href="javascript:;" class="display-block">
+                                        <img src="./uploads/hot2.png" class="width-percent">
+                                    </a>
+                                </div>
+                                <div class="half-width t_border">
+                                    <a href="javascript:;" class="display-block">
+                                        <img src="./uploads/hot3.png" class="width-percent">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float-left padding-top padding-bottom background-color total-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/title_pic1.png" class="width-percent">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 推荐 -->
+                        <div class="clearfix">
+                            <div class="float-left total-width b_border">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend1.png" class="width-percent">
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend2.png" class="width-percent t_border r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米8 青春版</p>
+                                        <p class="rec-descript">潮流镜面渐变色，自拍旗舰</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">1399</span>起</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend3.png" class="width-percent t_border l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米8 屏幕指纹版</p>
+                                        <p class="rec-descript">压感屏幕指纹，潮流外观</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">3199</span>起</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend4.png" class="width-percent r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">红米6A</p>
+                                        <p class="rec-descript">好用好看不贵</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">549</span>起</span>
+                                            <s class="old-price">&yen;<span class="then-price">599</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend5.png" class="width-percent l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米6X</p>
+                                        <p class="rec-descript">轻薄美观的拍照手机</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">1199</span>起</span>
+                                            <s class="old-price">&yen;<span class="then-price">1499</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend6.png" class="width-percent r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米8 SE</p>
+                                        <p class="rec-descript">三星 AMOLED 全面屏 小屏旗舰</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">1649</span>起</span>
+                                            <s class="old-price">&yen;<span class="then-price">1799</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend7.png" class="width-percent l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米平板4</p>
+                                        <p class="rec-descript">追剧神器 / 支持AI人脸识别</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">1099</span>起</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend8.png" class="width-percent r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米MIX 2S</p>
+                                        <p class="rec-descript">陶瓷机身 手机中的艺术品</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">2699</span>起</span>
+                                            <s class="old-price">&yen;<span class="then-price">3299</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend9.png" class="width-percent l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">红米6</p>
+                                        <p class="rec-descript">小屏高性能的双摄手机</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">749</span>起</span>
+                                            <s class="old-price">&yen;<span class="then-price">799</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend10.png" class="width-percent r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">黑鲨游戏手机 液冷更快</p>
+                                        <p class="rec-descript">液冷散热，独立图像处理芯片</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">2899</span>起</span>
+                                            <s class="old-price">&yen;<span class="then-price">2999</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend11.png" class="width-percent l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米Max 3</p>
+                                        <p class="rec-descript">大屏大电量 震撼视界</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">1699</span>起</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend12.png" class="width-percent r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米MIX 2</p>
+                                        <p class="rec-descript">大内存，128GB容量</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">2699</span>起</span>
+                                            <s class="old-price">&yen;<span class="then-price">4699</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/recommend13.png" class="width-percent l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">红米Note 5</p>
+                                        <p class="rec-descript">红米国民品质，拍照专家</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">899</span>起</span>
+                                            <s class="old-price">&yen;<span class="then-price">1099</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="float-left padding-top padding-bottom background-color total-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/computer_banner.png" class="width-percent">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 电视 -->
+                        <div class="clearfix m-tv">
+                            <div class="float-left total-width b_border">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/TV1.png" class="width-percent">
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/TV2.png" class="width-percent t_border r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米电视4A 32英寸</p>
+                                        <p class="rec-descript">64位处理器，高清智能电视</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">879</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">999</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/TV3.png" class="width-percent t_border l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">43"电视4A 青春版</p>
+                                        <p class="rec-descript">全高清屏，人工智能语音</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">1399</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">1699</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/TV4.png" class="width-percent r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米电视4C 50英寸</p>
+                                        <p class="rec-descript">钢琴烤漆，4K HDR</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">1899</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">2199</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/TV5.png" class="width-percent l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米电视4X 55英寸</p>
+                                        <p class="rec-descript">4K HDR，人工智能语音</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">2299</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">2799</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="float-left more-tv">
+                                <a href="javascript:;" class="display-block">更多小米电视产品 ></a>
+                            </div>
+                            <div class="float-left padding-top padding-bottom background-color total-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/title_pic3.png" class="width-percent">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 明星单品 -->
+                        <div class="clearfix m-star">
+                            <div class="float-left total-width b_border">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/single_product1.png" class="width-percent">
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/single_product3.png" class="width-percent t_border r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米手环3</p>
+                                        <p class="rec-descript">全新OLED可触摸大屏</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">169</span></span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/single_product4.png" class="width-percent t_border l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米电视4A 40英寸</p>
+                                        <p class="rec-descript">FHD全高清屏，四核处理器</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">1299</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">1599</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/single_product2.png" class="width-percent r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">米家IH电饭煲</p>
+                                        <p class="rec-descript">多才多艺的智能电饭煲</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">399</span></span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/single_product5.png" class="width-percent l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">九号平衡车</p>
+                                        <p class="rec-descript">年轻人的酷玩具</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">1949</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">1999</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/single_product6.png" class="width-percent r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米路由器</p>
+                                        <p class="rec-descript">信号强，距离远</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">99</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">199</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/single_product7.png" class="width-percent l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米AI音箱</p>
+                                        <p class="rec-descript">听音乐、语音遥控家电的人工智能音箱</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">299</span></span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="float-left padding-top padding-bottom background-color total-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/title_pic6.png" class="width-percent">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 新品上线 -->
+                        <div class="clearfix m-new-products">
+                            <div class="float-left total-width b_border">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/new_product1.png" class="width-percent">
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/new_product2.png" class="width-percent t_border r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米双单元半入耳式耳机Type-C版</p>
+                                        <p class="rec-descript">由耳入心，聆听初音</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">99</span></span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/new_product3.png" class="width-percent t_border l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米无线充电器（通用快充版）</p>
+                                        <p class="rec-descript">铝合金外观，金属质感好</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">69</span></span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/new_product4.png" class="width-percent r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">贝医生声波电动牙刷</p>
+                                        <p class="rec-descript">声波净齿，软毛护龈</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">99</span></span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/new_product5.png" class="width-percent l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">55"电视4S 曲面</p>
+                                        <p class="rec-descript">4K曲面屏，金属机身</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">2999</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">3299</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/new_product6.png" class="width-percent r_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">米兔儿童电话手表3 ｜ 4G版</p>
+                                        <p class="rec-descript">带你探索植物园的智能电话手表</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">599</span></span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box half-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/new_product7.png" class="width-percent l_border">
+                                    <div class="rec-details">
+                                        <p class="rec-version">小米电视4C 32英寸</p>
+                                        <p class="rec-descript">高清液晶屏，人工智能系统</p>
+                                        <p class="rec-price">
+                                            <span class="new-price">&yen;<span class="last-price">879</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">999</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="float-left more-new-products">
+                                <a href="javascript:;" class="display-block">更多新品 ></a>
+                            </div>
+                            <div class="float-left padding-top padding-bottom background-color total-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/title_pic5.png" class="width-percent">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 米家智能 -->
+                        <div class="m-home-ai">
+                            <div class="total-width b_border">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/intelligence1.png" class="width-percent">
+                                </a>
+                            </div>
+                            <div class="rec-box total-width">
+                                <a href="javascript:;" class="display-block clearfix">
+                                    <div class="half-width float-left">
+                                        <img src="./uploads/intelligence4.png" class="width-percent t_border r_border">
+                                    </div>
+                                    <div class="ai-details float-left half-width">
+                                        <p class="p-name">米家恒温电水壶</p>
+                                        <p class="p-descript">水温智能控制，快速沸腾，三重安全保护</p>
+                                        <p class="p-price">
+                                            <span class="new-price">&yen;<span class="last-price">179</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">199</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box total-width">
+                                <a href="javascript:;" class="display-block clearfix">
+                                    <div class="ai-details float-left half-width">
+                                        <p class="p-name">米家空气净化器MAX</p>
+                                        <p class="p-descript">适用大面积，长效滤芯寿命，先进静音技术</p>
+                                        <p class="p-price">
+                                            <span class="new-price">&yen;<span class="last-price">1999</span></span>
+                                        </p>
+                                    </div>
+                                    <div class="half-width float-left">
+                                        <img src="./uploads/intelligence2.png" class="width-percent t_border r_border">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rec-box total-width">
+                                <a href="javascript:;" class="display-block clearfix">
+                                    <div class="half-width float-left">
+                                        <img src="./uploads/intelligence3.png" class="width-percent t_border r_border">
+                                    </div>
+                                    <div class="ai-details float-left half-width">
+                                        <p class="p-name">米家便携电动剃须刀</p>
+                                        <p class="p-descript">超便携，男人必备的第二把剃须刀</p>
+                                        <p class="p-price">
+                                            <span class="new-price">&yen;<span class="last-price">169</span></span>
+                                            <s class="old-price">&yen;<span class="then-price">179</span></s>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="more-home-ai">
+                                <a href="javascript:;" class="display-block">更多米家智能产品 ></a>
+                            </div>
+                            <div class="padding-top padding-bottom background-color total-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/title_pic4.png" class="width-percent">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 其他 -->
+                        <div class="m-other clearfix">
+                            <div class="float-left half-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/other1.png" class="width-percent b_border r_border">
+                                </a>
+                            </div>
+                            <div class="float-left half-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/other2.png" class="width-percent b_border l_border">
+                                </a>
+                            </div>
+                            <div class="float-left half-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/other3.png" class="width-percent b_border r_border">
+                                </a>
+                            </div>
+                            <div class="float-left half-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/other4.png" class="width-percent b_border l_border">
+                                </a>
+                            </div>
+                            <div class="float-left half-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/other5.png" class="width-percent r_border">
+                                </a>
+                            </div>
+                            <div class="float-left half-width">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/other6.png" class="width-percent l_border">
+                                </a>
+                            </div>
+                            <div class="padding-top background-color total-width float-left">
+                                <a href="javascript:;" class="display-block">
+                                    <img src="./uploads/title_pic7.png" class="width-percent">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 了解小米 -->
+                    <div class="know-about-m total-width">
+                        <a href="javascript:;" class="display-block">
+                            <img src="./images/know-about-mi.png" class="width-percent">
+                        </a>
+                    </div>
+                </li>
+                <li>手机</li>
+                <li>电视</li>
+                <li>智能</li>
+                <li>笔记本</li>
+                <li>家电</li>
+                <li>新款游戏本</li>
+                <li>双摄</li>
+                <li>全面屏</li>
+                <li>生活周边</li>
+                <li>盒子</li>
+            </ul>
+        </div>
+        <!-- 底部固定栏 -->
+        <div class="footer">
+            <ul class="clearfix">
+                <li class="active">
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-home"></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-list"></i>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-cart"></i>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-username"></i>
+                        <p>我的</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+html,body,div,p,img,li,a,ul,form,input,h1,h2,h3,h4,h5,h6 {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    font-family: '微软雅黑' sans-serif;
+    font-size: .26rem;
+}
+img {
+    border:none;
+    vertical-align: middle;
+}
+a,
+a:hover
+a:visited {
+    color: #666;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+input {
+    border: none;
+}
+input:focus {
+    outline: none;
+}
+.clearfix::before,
+.clearfix::after {
+    content:"";
+    display:table;
+}
+.clearfix::after {
+    clear:both;
+}
+.clearfix {
+    *zoom:1;
+}
+.l_border {
+    border-left: 1px solid #fff;
+}
+.r_border {
+    border-right: 1px solid #fff;
+}
+.t_border {
+    border-top: 1px solid #fff;
+}
+.b_border {
+    border-bottom: 1px solid #fff;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.half-width {
+    width: 3.6rem;
+}
+.total-width {
+    width: 7.2rem;
+}
+.width-percent {
+    width: 100%;
+}
+.padding-top {
+    padding-top: .15rem;
+}
+.padding-bottom {
+    padding-bottom: .15rem;
+}
+.background-color {
+    background-color: #eee;
+}
+.display-block {
+    display: block;
+}
