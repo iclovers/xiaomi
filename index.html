@@ -87,7 +87,7 @@
         <div class="content">
             <ul class="content-box clearfix">
                 <!-- 推荐板块 -->
-                <li>
+                <li class="active">
                     <!-- 轮播图 -->
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -658,20 +658,18 @@
                         </a>
                     </div>
                 </li>
-                <li>手机</li>
-                <li>电视</li>
-                <li>智能</li>
-                <li>笔记本</li>
-                <li>家电</li>
-                <li>新款游戏本</li>
-                <li>双摄</li>
-                <li>全面屏</li>
-                <li>生活周边</li>
-                <li>盒子</li>
+                <!-- tab切换栏的其他版面（添加颜色测试滑动效果） -->
+                <li style="height: 1000px; background-color: brown">手机</li>
+                <li style="height: 1000px; background-color: rgb(67, 165, 42)">电视</li>
+                <li style="height: 1000px; background-color: rgb(42, 81, 165)">智能</li>
+                <li style="height: 1000px; background-color: rgb(161, 42, 165)">笔记本</li>
+                <li style="height: 1000px; background-color: rgb(165, 42, 114)">家电</li>
+                <li style="height: 1000px; background-color: rgb(165, 42, 69)">新款游戏本</li>
+                <li style="height: 1000px; background-color: rgb(142, 165, 42)">双摄</li>
+                <li style="height: 1000px; background-color: rgb(165, 122, 42)">全面屏</li>
+                <li style="height: 1000px; background-color: rgb(22, 31, 20)">生活周边</li>
+                <li style="height: 1000px; background-color: rgb(42, 147, 165)">盒子</li>
             </ul>
-            <div class="to-top display-btn">
-                <i class="layui-icon layui-icon-top"></i>
-            </div>
         </div>
         <!-- 底部固定栏 -->
         <div class="footer">
@@ -702,6 +700,9 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <div class="to-top display-btn">
+        <i class="layui-icon layui-icon-top"></i>
     </div>
     <script src="./js/index.js"></script>
 </body>

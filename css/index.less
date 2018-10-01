@@ -1,11 +1,7 @@
 .layout {
     width: 7.2rem;
     max-width: 720px;
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
-    z-index: 1;
     .header {
         position: fixed;
         width: 7.2rem;
@@ -136,18 +132,17 @@
     .content {
         width: 7.2rem;
         padding: 1.68rem 0 1rem;
-        position: relative;
-        height: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
         >ul {
-            position: absolute;
-            width: 79.2rem;
-            left: 0;
-            top:1.68rem;
+            position: relative;
+            width: 7.2rem;
             >li {
-                float: left;
+                overflow:-Scroll;
+                overflow-x : hidden;
+                display: none;
+                position: absolute;
                 width: 7.2rem;
+                top:0;
+                left: 0;
                 .swiper-container {
                     width: 7.2rem;
                     .swiper-wrapper {
@@ -279,26 +274,10 @@
                 .know-about-m {
                     padding-bottom: 1rem;
                 }
+                &.active {
+                    display: block;
+                }
             }
-        }
-        .to-top {
-            display: block;
-            position: fixed;
-            width: .6rem;
-            height: .6rem;
-            z-index: 9999;
-            background-color: rgba(0,0,0,.3);
-            right: .2rem;
-            bottom: 1.2rem;
-            text-align: center;
-            border-radius: .1rem;
-            i {
-                font-size: .5rem;
-                line-height: .6rem;
-            }
-        }
-        .display-btn {
-            display: none;
         }
     }
     .footer {
@@ -339,5 +318,24 @@
                }
            } 
         }
+    }
+}
+.to-top {
+    display: block;
+    position: fixed;
+    width: .6rem;
+    height: .6rem;
+    border-radius: .1rem;
+    right: .2rem;
+    bottom: 1.2rem;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    line-height: .6rem;
+    i {
+        font-size: .5rem;
+        color: #fff;
+    }
+    &.display-btn {
+        display: none;
     }
 }

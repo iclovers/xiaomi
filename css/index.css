@@ -1,11 +1,7 @@
 .layout {
   width: 7.2rem;
   max-width: 720px;
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
-  z-index: 1;
 }
 .layout .header {
   position: fixed;
@@ -132,20 +128,19 @@
 .layout .content {
   width: 7.2rem;
   padding: 1.68rem 0 1rem;
-  position: relative;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 .layout .content > ul {
-  position: absolute;
-  width: 79.2rem;
-  left: 0;
-  top: 1.68rem;
+  position: relative;
+  width: 7.2rem;
 }
 .layout .content > ul > li {
-  float: left;
+  overflow: -Scroll;
+  overflow-x: hidden;
+  display: none;
+  position: absolute;
   width: 7.2rem;
+  top: 0;
+  left: 0;
 }
 .layout .content > ul > li .swiper-container {
   width: 7.2rem;
@@ -267,24 +262,8 @@
 .layout .content > ul > li .know-about-m {
   padding-bottom: 1rem;
 }
-.layout .content .to-top {
+.layout .content > ul > li.active {
   display: block;
-  position: fixed;
-  width: .6rem;
-  height: .6rem;
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.3);
-  right: .2rem;
-  bottom: 1.2rem;
-  text-align: center;
-  border-radius: .1rem;
-}
-.layout .content .to-top i {
-  font-size: .5rem;
-  line-height: .6rem;
-}
-.layout .content .display-btn {
-  display: none;
 }
 .layout .footer {
   width: 7.2rem;
@@ -322,4 +301,23 @@
 }
 .layout .footer > ul li.active a p {
   color: #ed5b00;
+}
+.to-top {
+  display: block;
+  position: fixed;
+  width: .6rem;
+  height: .6rem;
+  border-radius: .1rem;
+  right: .2rem;
+  bottom: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: .6rem;
+}
+.to-top i {
+  font-size: .5rem;
+  color: #fff;
+}
+.to-top.display-btn {
+  display: none;
 }

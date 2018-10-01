@@ -32,8 +32,8 @@ $(function () {
     loop: true
   })
   // 回到顶部按钮
-  $('.content').scroll(function () {   //获取滚动条初始高度
-    var topD = $('.content').scrollTop();  //获取滚动条初始高度的值 ：0
+  $(document).scroll(function () {   //获取滚动条初始高度
+    var topD = $(document).scrollTop();  //获取滚动条初始高度的值 ：0
     if (topD <= 200) {  //当滚动条高度为0时
       $('.to-top').addClass('display-btn');
     } else {
@@ -41,7 +41,7 @@ $(function () {
     }
     $('.to-top').on('click', function () {
       //在执行动画之前加入stop(),停止当前的动画再执行此事件，否则回到顶部之后不能下拉
-      $('.content').stop().animate({ scrollTop: 0 }, 500);
+      $('html').stop().animate({ scrollTop: 0 }, 500);
       return false;
     })
   })
@@ -90,6 +90,8 @@ function scrollBar(e) {
   })
   //在此处设置index,方便后面多个函数共同使用
   var index = 0;
+  //设一个变量用来记录index的值，用来确认tab栏的内容的进来方向
+  var flag = 0;
   // 给头部导航按钮注册点击事件
   $('.slide-bar>li').on('click', function () {
     // 获取当前被点击的索引
@@ -103,8 +105,7 @@ function scrollBar(e) {
     // 左右横向导航条操作
     $(this).addClass('active').siblings().removeClass('active');
     $('.slide-box-bd>span').eq(index).addClass('active').siblings().removeClass('active');
-    $('.content-box')[0].style.transition = 'left 0.5s';
-    $('.content-box')[0].style.left = -index * 7.2 + 'rem';
+    
   })
   // 下拉导航框操作
   $('.slide-box-bd>span').on('click', function () {
@@ -112,8 +113,6 @@ function scrollBar(e) {
     clickBar();
     $(this).addClass('active').siblings().removeClass('active');
     $('.slide-bar>li').eq(index).addClass('active').siblings().removeClass('active');
-    $('.content-box')[0].style.transition = 'left 0.5s';
-    $('.content-box')[0].style.left = -index * 7.2 + 'rem';
   })
   //将导航偏移封装，便于复用
   function clickBar() {
@@ -138,6 +137,23 @@ function scrollBar(e) {
       slide_bar.style.transition = 'all 0.5s';
       slide_bar.style.left = (2 * fw - nw) / fw + 'rem';
       currentX = (2 * fw - nw);
+    }
+    //根据点击的按钮控制li进来的方向，达到切换的效果
+    //当前li显示，其他的隐藏
+    $('.content-box>li').eq(index).addClass('active').siblings().removeClass('active');
+    // 判断当前点击的按钮在原来的前面还是后面
+    if (flag < index) {
+      // 当前点击的按钮在原状态按钮的后面，则先把让当前的内容栏从右侧进入
+      $('.content-box>li').eq(index).css('left', '7.2rem');
+      $('.content-box>li').eq(index).animate({ 'left': 0 }, 200);
+      // 将当前的索引值赋给flag，下次切换时使用
+      flag = index;
+    } else if (flag > index) {
+      // 当前点击的按钮在原状态按钮的前面，则先把让当前的内容栏从左侧进入
+      $('.content-box>li').eq(index).css('left', '-7.2rem');
+      $('.content-box>li').eq(index).animate({ 'left': 0 }, 200);
+      // 将当前的索引值赋给flag，下次切换时使用
+      flag = index;
     }
   }
 }
