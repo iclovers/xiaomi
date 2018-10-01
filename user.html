@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>登录</title>
+    <title>用户</title>
     <link rel="stylesheet" href="./css/layui.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/common.css">
@@ -16,35 +16,49 @@
 </head>
 
 <body>
-    <!-- 底部固定栏 -->
-    <div class="footer">
-        <ul class="clearfix">
-            <li class="active">
-                <a href="javascript:;">
-                    <i class="layui-icon layui-icon-home"></i>
-                    <p>首页</p>
+    <div class="user-layout">
+        <!-- 头部 -->
+        <div class="header">
+            <div class="via float-left">
+                <a href="javascrip:;" class="display-block">
+                    <img src="./images/user1.png" alt="">
                 </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <i class="layui-icon layui-icon-list"></i>
-                    <p>分类</p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <i class="layui-icon layui-icon-cart"></i>
-                    <p>购物车</p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <i class="layui-icon layui-icon-username"></i>
-                    <p>我的</p>
-                </a>
-            </li>
-        </ul>
+            </div>
+            <div class="name float-left">
+                <a href="javascrip:;">登录/注册</a>
+            </div>
+        </div>
+        <!-- 底部固定栏 -->
+        <div class="footer">
+            <ul class="clearfix">
+                <li>
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-home"></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-list"></i>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-cart"></i>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-username"></i>
+                        <p>我的</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
+    
     <script src="./js/user.js"></script>
 </body>
 
