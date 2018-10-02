@@ -12,43 +12,50 @@
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   background: #f2f2f2;
 }
-.layout .header .header-wrap .layui-row {
+.layout .header .header-wrap {
   height: 1rem;
 }
-.layout .header .header-wrap .layui-row .logo {
-  display: inline-block;
-  height: .5rem;
-  margin: .25rem 0 0 .2rem;
-}
-.layout .header .header-wrap .layui-row .logo img {
-  height: 100%;
-}
-.layout .header .header-wrap .layui-row .search {
-  position: relative;
-}
-.layout .header .header-wrap .layui-row .search input {
-  width: 100%;
-  height: .7rem;
-  padding-left: .7rem;
-  margin-top: .15rem;
-  font-size: .3rem;
-}
-.layout .header .header-wrap .layui-row .search i {
-  position: absolute;
-  line-height: .7rem;
-  top: .15rem;
-  left: .15rem;
-  font-size: .3rem;
-}
-.layout .header .header-wrap .layui-row .login {
+.layout .header .header-wrap .logo {
   display: block;
   height: 1rem;
+  width: 1.2rem;
+  float: left;
   text-align: center;
   line-height: 1rem;
 }
-.layout .header .header-wrap .layui-row .login i {
-  font-size: .5rem;
-  color: #999;
+.layout .header .header-wrap .logo img {
+  height: .4rem;
+}
+.layout .header .header-wrap .login {
+  display: block;
+  float: right;
+  width: 1.2rem;
+  text-align: center;
+  height: 100%;
+}
+.layout .header .header-wrap .login i {
+  line-height: 1rem;
+  font-size: .4rem;
+}
+.layout .header .header-wrap .search {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+.layout .header .header-wrap .search input {
+  display: block;
+  width: 100%;
+  height: 60%;
+  margin-top: .2rem;
+  padding-left: .6rem;
+  font-size: .24rem;
+}
+.layout .header .header-wrap .search i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: .15rem;
+  font-size: .3rem;
 }
 .layout .header .nav-wrap {
   position: relative;
@@ -136,11 +143,10 @@
 .layout .content > ul > li {
   overflow: -Scroll;
   overflow-x: hidden;
-  display: none;
   position: absolute;
   width: 7.2rem;
   top: 0;
-  left: 0;
+  left: -7.2rem;
 }
 .layout .content > ul > li .swiper-container {
   width: 7.2rem;
@@ -263,7 +269,7 @@
   padding-bottom: 1rem;
 }
 .layout .content > ul > li.active {
-  display: block;
+  left: 0;
 }
 .to-top {
   display: block;

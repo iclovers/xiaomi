@@ -1,0 +1,93 @@
+.category-layout {
+    position: absolute;
+    width: 7.2rem;
+    height: 100%;
+    padding: 1rem 0;
+    .header {
+        position: fixed;
+        height: 1rem;
+        width: 7.2rem;
+        left: 0;
+        top: 0;
+        background-color: #f2f2f2;
+        text-align: center;
+        line-height: 1rem;
+        font-size: .3rem;
+        color: #666;
+        .i-turn {
+            height: 1rem;
+            padding-left: .3rem;
+            i {
+                font-size: .4rem;
+            }
+        }
+        .i-search {
+            height: 1rem;
+            margin-right: .4rem;
+            i {
+                font-size: .4rem;
+            }
+        }
+        
+    }
+    .content {
+        width: 7.2rem;
+        height: 100%;
+        .left-nav {
+            float: left;
+            position: relative;
+            width: 1.5rem;
+            height: 100%;
+            border-right: 1px solid #ccc;
+            overflow: hidden;
+            >ul {
+                position: absolute;
+                background-color: #fefefe;
+                li {
+                    a {
+                        display: block;
+                        width: 1.5rem;
+                        height: .9rem;
+                        text-align: center;
+                        line-height: .9rem;
+                        font-size: .26rem;
+                        color: #333;
+                    }
+                    &.active {
+                        a {
+                            font-size: .3rem;
+                            color: #fb7d34;
+                        }
+                    }
+                }
+            }
+        }
+        .right-content {
+            width: 100%;
+            padding: 0 .3rem 1rem 1.8rem; 
+            .title-text {
+                text-align: center;
+                line-height: 1.2rem;
+                span {
+                    padding: 0 .2rem;
+                    position: relative;
+                    font-size: .28rem;
+                    &::before, &::after {
+                        content: "";
+                        position: absolute;
+                        width: .4rem;
+                        height: 1px;
+                        background-color: #ccc;
+                        top:50%;
+                    }
+                    &::before {
+                        left: -.4rem;
+                    }
+                    &::after {
+                        right: -.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

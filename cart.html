@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>小米-分类</title>
+    <link rel="stylesheet" href="./css/layui.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/layui.js"></script>
+    <script src="./js/base.js"></script>
+</head>
+
+<body>
+    <div class="cart-layout">
+        <!-- 头部 -->
+        <div class="header">
+            <a href="./index.html" class="float-left i-turn">
+                <i class="layui-icon layui-icon-left"></i>
+            </a>
+            购物车
+            <a href="javascript:;" class="float-right i-search">
+                <i class="layui-icon layui-icon-search"></i>
+            </a>
+        </div>
+        <div class="login-btn">
+            <span class="float-left">登录后享受更多优惠</span>
+            <a href="javascript:;" class="float-right">去登录</a>
+            <i class="layui-icon layui-icon-right"></i>
+        </div>
+        <div class="shopping">
+            <div href="javascript:;" class="shopping-box"></div>
+            <span>购物车还是空的</span>
+            <a href="javascript:;"  class="shopping-btn">去逛逛</a>
+        </div>
+        <div class="you-like clearfix">
+            <div class="float-left total-width">
+                <a href="javascript:;" class="display-block">
+                    <img src="./images/cart-title.png" class="width-percent b-border">
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card1.png" class="width-percent t_border r_border">
+                    <div class="details">
+                        <p class="name">红米6A 3GB+32GB</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">649</span></span>
+                            <s class="old-price">&yen;<span class="then-price">699</span></s>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card2.png" class="width-percent t_border l_border">
+                    <div class="details">
+                        <p class="name">小米平板4 Plus 10英寸 LTE版 128GB</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">2099</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card3.png" class="width-percent r_border">
+                    <div class="details">
+                        <p class="name">小米V领短袖T恤</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">9.9</span></span>
+                            <s class="old-price">&yen;<span class="then-price">49</span></s>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card4.png" class="width-percent l_border">
+                    <div class="details">
+                        <p class="name">红米4 16GB版</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">799</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card5.png" class="width-percent r_border">
+                    <div class="details">
+                        <p class="name">小米影视会员卡</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">498</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card6.png" class="width-percent l_border">
+                    <div class="details">
+                        <p class="name">1MORE头戴式耳机</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">299</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card7.png" class="width-percent r_border">
+                    <div class="details">
+                        <p class="name">90分智能金属旅行箱</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">1899</span></span>
+                            <s class="old-price">&yen;<span class="then-price">1999</span></s>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card8.png" class="width-percent l_border">
+                    <div class="details">
+                        <p class="name">90分轻户外旅行洗漱包</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">34</span></span>
+                            <s class="old-price">&yen;<span class="then-price">39</span></s>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card9.png" class="width-percent r_border">
+                    <div class="details">
+                        <p class="name">红米手机</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">899</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card10.png" class="width-percent l_border">
+                    <div class="details">
+                        <p class="name">25cm 经典款米兔</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">49</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card11.png" class="width-percent r_border">
+                    <div class="details">
+                        <p class="name">米家全景相机自拍杆</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">69</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card12.png" class="width-percent l_border">
+                    <div class="details">
+                        <p class="name">1MORE入耳式耳机</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">129</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card13.png" class="width-percent r_border">
+                    <div class="details">
+                        <p class="name">1MORE入耳式耳机</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">299</span></span>
+                            <s class="old-price">&yen;<span class="then-price">199</span></s>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card14.png" class="width-percent l_border">
+                    <div class="details">
+                        <p class="name">AirPOP 防雾霾滤芯</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">39</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card15.png" class="width-percent r_border">
+                    <div class="details">
+                        <p class="name">悟空米兔</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">49</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card16.png" class="width-percent l_border">
+                    <div class="details">
+                        <p class="name">防雾霾口罩 （1片装）</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">12.9</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card17.png" class="width-percent r_border">
+                    <div class="details">
+                        <p class="name">90分户外休闲双肩包</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">199</span></span>
+                            <s class="old-price">&yen;<span class="then-price">249</span></s>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card18.png" class="width-percent l_border">
+                    <div class="details">
+                        <p class="name">小米Max 2 32GB</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">1199</span></span>
+                            <s class="old-price">&yen;<span class="then-price">1399</span></s>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card19.png" class="width-percent r_border">
+                    <div class="details">
+                        <p class="name">自拍杆</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">99</span></span>
+                            <s class="old-price">&yen;<span class="then-price">149</span></s>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class=" half-width float-left">
+                <a href="javascript:;" class="display-block">
+                    <img src="./uploads/shopping_card20.png" class="width-percent l_border">
+                    <div class="details">
+                        <p class="name">小米毛巾</p>
+                        <p class="price">
+                            <span class="new-price">&yen;<span class="last-price">19</span></span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 底部固定栏 -->
+        <div class="footer">
+            <ul class="clearfix">
+                <li>
+                    <a href="./index.html">
+                        <i class="layui-icon layui-icon-home"></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category.html">
+                        <i class="layui-icon layui-icon-list"></i>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="./cart.html">
+                        <i class="layui-icon layui-icon-cart"></i>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./user.html">
+                        <i class="layui-icon layui-icon-username"></i>
+                        <p>我的</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -140,7 +140,10 @@ function scrollBar(e) {
     }
     //根据点击的按钮控制li进来的方向，达到切换的效果
     //当前li显示，其他的隐藏
-    $('.content-box>li').eq(index).addClass('active').siblings().removeClass('active');
+    for (var i = 0; i < $('.content-box')[0].children.length; i++){
+      $('.content-box')[0].children[i].style.left = '-7.2rem';
+    }
+    
     // 判断当前点击的按钮在原来的前面还是后面
     if (flag < index) {
       // 当前点击的按钮在原状态按钮的后面，则先把让当前的内容栏从右侧进入
