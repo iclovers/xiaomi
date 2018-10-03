@@ -14,6 +14,7 @@
         line-height: 1rem;
         font-size: .3rem;
         color: #666;
+        z-index: 999;
         .i-turn {
             height: 1rem;
             padding-left: .3rem;
@@ -31,18 +32,27 @@
         
     }
     .content {
-        width: 7.2rem;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
         .left-nav {
-            float: left;
-            position: relative;
+            position: fixed;
             width: 1.5rem;
-            height: 100%;
             border-right: 1px solid #ccc;
             overflow: hidden;
+            left: 0;
+            top: 1rem;
+            z-index: 9999;
             >ul {
                 position: absolute;
                 background-color: #fefefe;
+                top: 0;
                 li {
                     a {
                         display: block;
@@ -52,10 +62,11 @@
                         line-height: .9rem;
                         font-size: .26rem;
                         color: #333;
+                        transition: all .3s;
                     }
                     &.active {
                         a {
-                            font-size: .3rem;
+                            font-size: .34rem;
                             color: #fb7d34;
                         }
                     }
@@ -63,8 +74,13 @@
             }
         }
         .right-content {
-            width: 100%;
-            padding: 0 .3rem 1rem 1.8rem; 
+            position: absolute;
+            left: 1.52rem;
+            right: 0;
+            top: 49px;
+            bottom: 52px;
+            padding: 2px .32rem 6rem;
+            overflow: auto;
             .title-text {
                 text-align: center;
                 line-height: 1.2rem;
@@ -85,6 +101,31 @@
                     }
                     &::after {
                         right: -.4rem;
+                    }
+                }
+            }
+            .content-details {
+                width: 100%;
+                >ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        padding: .2rem .1rem 0;
+                        width: 33.3%;
+                        a {
+                            display: block;
+                            text-align: center;
+                            img {
+                                width: 50%;
+                            }
+                            p {
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                font-size: .18rem;
+                                line-height: .6rem;
+                            }
+                        }
                     }
                 }
             }

@@ -15,6 +15,7 @@
   line-height: 1rem;
   font-size: .3rem;
   color: #666;
+  z-index: 999;
 }
 .category-layout .header .i-turn {
   height: 1rem;
@@ -31,20 +32,29 @@
   font-size: .4rem;
 }
 .category-layout .content {
-  width: 7.2rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .category-layout .content .left-nav {
-  float: left;
-  position: relative;
+  position: fixed;
   width: 1.5rem;
-  height: 100%;
   border-right: 1px solid #ccc;
   overflow: hidden;
+  left: 0;
+  top: 1rem;
+  z-index: 9999;
 }
 .category-layout .content .left-nav > ul {
   position: absolute;
   background-color: #fefefe;
+  top: 0;
 }
 .category-layout .content .left-nav > ul li a {
   display: block;
@@ -54,14 +64,20 @@
   line-height: .9rem;
   font-size: .26rem;
   color: #333;
+  transition: all .3s;
 }
 .category-layout .content .left-nav > ul li.active a {
-  font-size: .3rem;
+  font-size: .34rem;
   color: #fb7d34;
 }
 .category-layout .content .right-content {
-  width: 100%;
-  padding: 0 .3rem 1rem 1.8rem;
+  position: absolute;
+  left: 1.52rem;
+  right: 0;
+  top: 49px;
+  bottom: 52px;
+  padding: 2px .32rem 6rem;
+  overflow: auto;
 }
 .category-layout .content .right-content .title-text {
   text-align: center;
@@ -86,4 +102,29 @@
 }
 .category-layout .content .right-content .title-text span::after {
   right: -0.4rem;
+}
+.category-layout .content .right-content .content-details {
+  width: 100%;
+}
+.category-layout .content .right-content .content-details > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.category-layout .content .right-content .content-details > ul li {
+  padding: .2rem .1rem 0;
+  width: 33.3%;
+}
+.category-layout .content .right-content .content-details > ul li a {
+  display: block;
+  text-align: center;
+}
+.category-layout .content .right-content .content-details > ul li a img {
+  width: 50%;
+}
+.category-layout .content .right-content .content-details > ul li a p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .18rem;
+  line-height: .6rem;
 }

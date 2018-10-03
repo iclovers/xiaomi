@@ -164,6 +164,7 @@
 .layout .content > ul > li .banner-nav > ul {
   width: 7.2rem;
   display: flex;
+  background-color: #fff;
 }
 .layout .content > ul > li .banner-nav > ul li {
   width: 1.44rem;

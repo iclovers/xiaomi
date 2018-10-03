@@ -51,6 +51,7 @@ $(function () {
 //封装导航栏函数
 function scrollBar(e) {
   var slide_bar = document.querySelector('.slide-bar');
+  //计算根元素字体大小
   var fw = parseInt(document.getElementsByTagName('html')[0].style.getPropertyValue("font-size"));
   var w = slide_bar.offsetWidth;
   var startX = 0,
@@ -68,10 +69,11 @@ function scrollBar(e) {
   slide_bar.addEventListener('touchmove', function (e) {
     moveX = e.targetTouches[0].clientX;
     distanceX = moveX - startX;
+    //判断是否超出边界，超出返回
     if (currentX + distanceX >= maxSlideLeft || currentX + distanceX <= minSlideLeft) {
       return;
-
     }
+    // 设置导航条当前的位置
     slide_bar.style.transition = 'none';
     slide_bar.style.left = (currentX + distanceX) / fw + 'rem';
   })
@@ -105,14 +107,17 @@ function scrollBar(e) {
     // 左右横向导航条操作
     $(this).addClass('active').siblings().removeClass('active');
     $('.slide-box-bd>span').eq(index).addClass('active').siblings().removeClass('active');
-    
+
   })
   // 下拉导航框操作
   $('.slide-box-bd>span').on('click', function () {
     index = $(this).index();
     clickBar();
     $(this).addClass('active').siblings().removeClass('active');
+    $('.slide-box').css('height', 0);
+    $('.slide-btn i').removeClass('down');
     $('.slide-bar>li').eq(index).addClass('active').siblings().removeClass('active');
+
   })
   //将导航偏移封装，便于复用
   function clickBar() {
@@ -139,19 +144,22 @@ function scrollBar(e) {
       currentX = (2 * fw - nw);
     }
     //根据点击的按钮控制li进来的方向，达到切换的效果
-    //当前li显示，其他的隐藏
-    for (var i = 0; i < $('.content-box')[0].children.length; i++){
-      $('.content-box')[0].children[i].style.left = '-7.2rem';
-    }
-    
     // 判断当前点击的按钮在原来的前面还是后面
     if (flag < index) {
+      //当前li显示，其他的隐藏
+      for (var i = 0; i < $('.content-box')[0].children.length; i++) {
+        $('.content-box')[0].children[i].style.left = '-7.2rem';
+      }
       // 当前点击的按钮在原状态按钮的后面，则先把让当前的内容栏从右侧进入
       $('.content-box>li').eq(index).css('left', '7.2rem');
       $('.content-box>li').eq(index).animate({ 'left': 0 }, 200);
       // 将当前的索引值赋给flag，下次切换时使用
       flag = index;
     } else if (flag > index) {
+      //当前li显示，其他的隐藏
+      for (var i = 0; i < $('.content-box')[0].children.length; i++) {
+        $('.content-box')[0].children[i].style.left = '-7.2rem';
+      }
       // 当前点击的按钮在原状态按钮的前面，则先把让当前的内容栏从左侧进入
       $('.content-box>li').eq(index).css('left', '-7.2rem');
       $('.content-box>li').eq(index).animate({ 'left': 0 }, 200);
