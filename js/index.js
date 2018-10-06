@@ -1,4 +1,10 @@
 $(function () {
+  //设置content的高度
+  var fw = parseInt(document.getElementsByTagName('html')[0].style.getPropertyValue("font-size"));
+  var ch = $(window).height() - $('.header').height() - $('.footer').height();
+  $('.content').css('height', ch);
+  $('.content-box').css('height', ch);
+
   $('.slide-btn').on('click', function () {
     //点击按钮旋转
     $('.slide-btn i').toggleClass('down');
@@ -32,16 +38,16 @@ $(function () {
     loop: true
   })
   // 回到顶部按钮
-  $(document).scroll(function () {   //获取滚动条初始高度
-    var topD = $(document).scrollTop();  //获取滚动条初始高度的值 ：0
-    if (topD <= 200) {  //当滚动条高度为0时
+  $('.content-box').on('scroll', function () {
+    var top = $('.content-box').scrollTop();
+    if (top <= 200) {  //当滚动条高度为0时
       $('.to-top').addClass('display-btn');
     } else {
       $('.to-top').removeClass('display-btn');
     }
     $('.to-top').on('click', function () {
       //在执行动画之前加入stop(),停止当前的动画再执行此事件，否则回到顶部之后不能下拉
-      $('html').stop().animate({ scrollTop: 0 }, 500);
+      $('.content-box').stop().animate({ scrollTop: 0 }, 500);
       return false;
     })
   })
